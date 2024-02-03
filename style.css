@@ -1,0 +1,156 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+html {
+    font-size: 16px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Very-Dark-Blue);
+}
+
+section {
+    width: 20rem;
+    height: 22rem;
+    position: relative;
+    perspective: 100rem;
+}
+
+main {
+    width: 20rem;
+    height: 22rem;
+    transform-style: preserve-3d;
+    position: absolute;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.rate,
+.thank {
+    height: max-content;
+    font-size: 0.9rem;
+    padding: 2em;
+    background-color: var(--Dark-Blue);
+    color: var(--Light-Grey);
+    border-radius: 1rem;
+    position: absolute;
+    inset: 0;
+}
+
+
+
+.btn-cntr {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1em;
+}
+
+.btn-cntr>button {
+    color: white;
+    border-radius: 50%;
+    background-color: hsl(213, 15%, 28%);
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    transition: all 0.5s linear;
+}
+
+.submit {
+    width: 100%;
+    border: 0;
+    padding: 0.8em;
+    border-radius: 2rem;
+    margin: auto;
+    color: white;
+    background-color: var(--Orange);
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+
+}
+.clicked{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+.submit:hover{
+    color:var(--Orange) ;
+    background-color: white;
+}
+.rated {
+    font-size: 1.1rem;
+    background-color: var(--Dark-Blue);
+    background-color: hsl(213, 15%, 28%);
+    padding: 0.5rem;
+    color: var(--Orange);
+    border-radius: 1rem;
+    display: inline-block;
+}
+.button:hover{
+    background-color: var(--Orange)!important;
+}
+h1 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.thank {
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+}
+
+.rate {
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.star>img {
+    background-color: hsl(213, 15%, 28%);
+    display: inline-block;
+    padding: 0.4rem;
+    border-radius: 50%;
+}
+
+@keyframes flip {
+
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+@media (min-width:400px) {
+    html{
+        font-size: 19px;
+    }
+    
+}
+@media (min-width:500px) {
+    html{
+        font-size: 25px;
+    }
+    
+}
+@media (min-width:1000px) {
+    html{
+        font-size: 18px;
+    }
+    
+}
